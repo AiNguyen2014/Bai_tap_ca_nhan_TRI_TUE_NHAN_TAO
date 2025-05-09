@@ -137,33 +137,35 @@ Nhược điểm: Lặp lại nhiều lần gây trùng lặp.
 Nguyên lý: Ưu tiên trạng thái có heuristic nhỏ nhất.
 Ưu điểm: Nhanh, dễ cài đặt.
 Nhược điểm: Dễ bị kẹt ở cục bộ, không đảm bảo tối ưu.
+
 ![Greedy Search](./Greedy.gif)
 
-6. A* - Tìm kiếm A*
+7. A* - Tìm kiếm A*
 Nguyên lý: f(n) = g(n) + h(n) (chi phí thực tế + ước lượng còn lại).
 Ưu điểm: Cân bằng giữa tốc độ và độ chính xác, giải tốt nhất với heuristic phù hợp.
 Nhược điểm: Tốn bộ nhớ, phụ thuộc chất lượng heuristic.
 ![A_star](./A_star.gif)
 
-7. IDA* - Tìm kiếm A* lặp sâu (Iterative Deepening A*)
+8. IDA* - Tìm kiếm A* lặp sâu (Iterative Deepening A*)
 Nguyên lý: A* nhưng theo chiều sâu, với ngưỡng chi phí tăng dần.
 Ưu điểm: Giảm dùng bộ nhớ so với A*.
 Nhược điểm: Phải mở rộng lại nhiều trạng thái.
 ![IDA*](./IDA_star.gif)
 
-8. Simple HC - Leo đồi đơn giản (Hill Climbing)
+9. Simple HC - Leo đồi đơn giản (Hill Climbing)
 Nguyên lý: Luôn chọn trạng thái tốt hơn hiện tại.
 Ưu điểm: Nhanh, ít tài nguyên.
 Nhược điểm: Kẹt tại cực trị cục bộ.
+
 ![Simple Hill Climbing](./SimpleHillClimbing.gif)
 
-9. Steepest HC - Leo đồi dốc nhất
+10. Steepest HC - Leo đồi dốc nhất
 Nguyên lý: Dò toàn bộ hàng xóm, chọn cái tốt nhất.
 Ưu điểm: Ít rơi vào cực trị hơn Simple HC.
 Nhược điểm: Vẫn có thể kẹt, hiệu suất thấp hơn.
 ![Steepest Ascent Hill Climbing](./Steepest.gif)
 
-10. Stochastic HC - Leo đồi ngẫu nhiên
+11. Stochastic HC - Leo đồi ngẫu nhiên
 Nguyên lý: Chọn ngẫu nhiên hàng xóm cải thiện trạng thái.
 Ưu điểm: Tránh bẫy cực trị tốt hơn HC thường.
 Nhược điểm: Không đảm bảo tối ưu, kết quả phụ thuộc may mắn.
