@@ -115,87 +115,93 @@ Nguyên lý: Duyệt theo nhánh sâu nhất trước khi quay lại các nhánh
 Nhược điểm: Có thể đi vào vòng lặp vô tận, không đảm bảo tìm ra lời giải ngắn nhất.
 ![DFS](DFS.gif)
 
-3. BFS - Tìm kiếm theo chiều rộng (Breadth-First Search)
+2. BFS - Tìm kiếm theo chiều rộng (Breadth-First Search)
 Nguyên lý: Duyệt tất cả các trạng thái cùng độ sâu trước khi tăng độ sâu.
 Ưu điểm: Luôn tìm được lời giải tối ưu (nếu tồn tại).
 Nhược điểm: Tốn nhiều bộ nhớ và thời gian với không gian trạng thái lớn.
+![BFS](./BFS.gif)
 
-4. UCS - Tìm kiếm chi phí đồng nhất (Uniform Cost Search)
+3. UCS - Tìm kiếm chi phí đồng nhất (Uniform Cost Search)
 Nguyên lý: Mở rộng trạng thái có chi phí thấp nhất.
 Ưu điểm: Tìm được lời giải tối ưu.
 Nhược điểm: Chạy chậm nếu chi phí cao và không có heuristic.
 
-5. IDS - Tìm kiếm sâu dần (Iterative Deepening Search)
+6. IDS - Tìm kiếm sâu dần (Iterative Deepening Search)
 Nguyên lý: Lặp DFS với giới hạn độ sâu tăng dần.
 Ưu điểm: Kết hợp lợi ích của DFS và BFS.
 Nhược điểm: Lặp lại nhiều lần gây trùng lặp.
 
-6. Greedy - Tìm kiếm tham lam
+7. Greedy - Tìm kiếm tham lam
 Nguyên lý: Ưu tiên trạng thái có heuristic nhỏ nhất.
 Ưu điểm: Nhanh, dễ cài đặt.
 Nhược điểm: Dễ bị kẹt ở cục bộ, không đảm bảo tối ưu.
 
-7. A* - Tìm kiếm A*
+8. A* - Tìm kiếm A*
 Nguyên lý: f(n) = g(n) + h(n) (chi phí thực tế + ước lượng còn lại).
 Ưu điểm: Cân bằng giữa tốc độ và độ chính xác, giải tốt nhất với heuristic phù hợp.
 Nhược điểm: Tốn bộ nhớ, phụ thuộc chất lượng heuristic.
+![A_star](./A_star.gif)
 
-8. IDA* - Tìm kiếm A* lặp sâu (Iterative Deepening A*)
+10. IDA* - Tìm kiếm A* lặp sâu (Iterative Deepening A*)
 Nguyên lý: A* nhưng theo chiều sâu, với ngưỡng chi phí tăng dần.
 Ưu điểm: Giảm dùng bộ nhớ so với A*.
 Nhược điểm: Phải mở rộng lại nhiều trạng thái.
 
-9. Simple HC - Leo đồi đơn giản (Hill Climbing)
+11. Simple HC - Leo đồi đơn giản (Hill Climbing)
 Nguyên lý: Luôn chọn trạng thái tốt hơn hiện tại.
 Ưu điểm: Nhanh, ít tài nguyên.
 Nhược điểm: Kẹt tại cực trị cục bộ.
 
-10. Steepest HC - Leo đồi dốc nhất
+12. Steepest HC - Leo đồi dốc nhất
 Nguyên lý: Dò toàn bộ hàng xóm, chọn cái tốt nhất.
 Ưu điểm: Ít rơi vào cực trị hơn Simple HC.
 Nhược điểm: Vẫn có thể kẹt, hiệu suất thấp hơn.
 
-11. Stochastic HC - Leo đồi ngẫu nhiên
+13. Stochastic HC - Leo đồi ngẫu nhiên
 Nguyên lý: Chọn ngẫu nhiên hàng xóm cải thiện trạng thái.
 Ưu điểm: Tránh bẫy cực trị tốt hơn HC thường.
 Nhược điểm: Không đảm bảo tối ưu, kết quả phụ thuộc may mắn.
 
-12. Beam Search - Tìm kiếm chùm
+14. Beam Search - Tìm kiếm chùm
 Nguyên lý: Chỉ giữ k trạng thái tốt nhất mỗi bước.
 Ưu điểm: Giảm bộ nhớ, chạy nhanh.
 Nhược điểm: Có thể bỏ sót lời giải tối ưu.
+![Beam_Search](./Beam_Search.gif)
 
-13. GA - Thuật toán di truyền (Genetic Algorithm)
+16. GA - Thuật toán di truyền (Genetic Algorithm)
 Nguyên lý: Tiến hóa qua lai ghép và đột biến các cá thể (trạng thái).
 Ưu điểm: Tìm giải gần tối ưu trong không gian lớn.
 Nhược điểm: Chậm, không đảm bảo giải tốt nhất.
 
-14. SA - Simulated Annealing
+17. SA - Simulated Annealing
 Nguyên lý: Chấp nhận trạng thái xấu theo xác suất, giảm dần theo thời gian.
 Ưu điểm: Thoát bẫy cực trị tốt.
 Nhược điểm: Cần tinh chỉnh tham số nhiệt độ, chậm nếu không đúng cách.
 
-15. AND-OR Graph Search
+18. AND-OR Graph Search
 Nguyên lý: Xây cây AND-OR để tìm giải quyết vấn đề có nhiều kết quả hoặc phụ thuộc điều kiện.
 Ưu điểm: Phù hợp môi trường không xác định.
 Nhược điểm: Quá phức tạp cho 8-puzzle.
+![AND_OR-Search](./AND_OR-Search.gif)
 
-16. Belief State Search
+19. Belief State Search
 Nguyên lý: Tìm kiếm trong không gian các trạng thái có thể (niềm tin).
 Ưu điểm: Giải được bài toán thiếu thông tin.
 Nhược điểm: Không cần thiết cho 8-puzzle (môi trường xác định).
+![Belief](./Belief.gif)
 
-17. Partial Observability Search
+21. Partial Observability Search
 Nguyên lý: Áp dụng trong môi trường không quan sát đầy đủ.
 Ưu điểm: Giải bài toán robot không nhìn toàn bản đồ.
 Nhược điểm: Quá dư thừa cho 8-puzzle.
 
-18. Backtracking - Quay lui
+22. Backtracking - Quay lui
 Nguyên lý: Duyệt từng bước, lùi lại khi không còn lựa chọn.
 Ưu điểm: Cần ít bộ nhớ, dễ cài.
 Nhược điểm: Rất chậm, dễ lặp lại, không hiệu quả với 8-puzzle.
+![Backtracking](./Backtracking.gif)
 
-19. Q-Learning - Học tăng cường Q
+23. Q-Learning - Học tăng cường Q
 Nguyên lý: Học chính sách hành động tối ưu thông qua thử và sai.
 Ưu điểm: Tự học mà không cần mô hình môi trường.
 Nhược điểm: Cần thời gian học dài, phức tạp cho bài toán nhỏ như 8-puzzle.
