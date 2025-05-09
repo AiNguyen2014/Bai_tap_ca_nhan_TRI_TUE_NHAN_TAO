@@ -113,7 +113,7 @@ Trạng thái mục tiêu (goal_state):
 Nguyên lý: Duyệt theo nhánh sâu nhất trước khi quay lại các nhánh khác.
 Ưu điểm: Dễ cài đặt, tiết kiệm bộ nhớ hơn BFS.
 Nhược điểm: Có thể đi vào vòng lặp vô tận, không đảm bảo tìm ra lời giải ngắn nhất.
-
+![DFS](DFS.gif)
 
 3. BFS - Tìm kiếm theo chiều rộng (Breadth-First Search)
 Nguyên lý: Duyệt tất cả các trạng thái cùng độ sâu trước khi tăng độ sâu.
