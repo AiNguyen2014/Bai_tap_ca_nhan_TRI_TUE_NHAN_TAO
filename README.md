@@ -167,6 +167,7 @@ Nhược điểm: Vẫn có thể kẹt, hiệu suất thấp hơn.
 Nguyên lý: Chọn ngẫu nhiên hàng xóm cải thiện trạng thái.
 Ưu điểm: Tránh bẫy cực trị tốt hơn HC thường.
 Nhược điểm: Không đảm bảo tối ưu, kết quả phụ thuộc may mắn.
+
 ![Stochastic Hill Climbing](./Stochastic.gif)
 
 11. Beam Search - Tìm kiếm chùm
